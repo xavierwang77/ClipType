@@ -1,3 +1,6 @@
 fn main() {
-    println!("Hello, world!");
+    if let Err(error) = cliptype::run() {
+        eprintln!("cliptype failed: {error}");
+        std::process::exit(1);
+    }
 }
